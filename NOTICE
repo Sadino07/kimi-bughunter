@@ -1,0 +1,30 @@
+# NOTICE
+
+This repository is a **format adaptation** of
+[Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter)
+by **Sachin Sharma / ElementalSoul**, converted from the Claude Code skill
+format to the [Kimi Code CLI](https://www.kimi.com/code/docs/en/) skill format.
+
+## Licensing (same split as upstream)
+
+- **Code** (`convert_to_kimi.py`, `validate_skills.py`, `.github/workflows/*`)
+  — MIT License. See `LICENSE`.
+- **Skill content** (`skills/**`, derived from upstream skill methodology,
+  wordlists, regex catalogs, severity rubrics) — **CC BY 4.0**.
+  See `LICENSE-CONTENT`. Attribution to Sachin Sharma / ElementalSoul is
+  preserved at the foot of every generated `SKILL.md`.
+
+The upstream MIT license text is kept at `LICENSE.upstream-reference` for
+traceability.
+
+## What this repo adds
+
+1. Automated daily sync: re-converts upstream `skills/` + `commands/` to Kimi
+   format whenever the upstream changes, validates them, and pushes the result
+   (`.github/workflows/sync-upstream.yml`).
+2. Kimi-specific frontmatter (`whenToUse`, `type`, `arguments`) so skills
+   auto-load by topic in Kimi Code CLI.
+3. The 15 upstream slash commands exposed as manually-invoked
+   `cbh-*` flow skills (`/skill:cbh-hunt`, `/skill:cbh-recon`, ...).
+
+Nothing else is modified: the methodology content is upstream's, verbatim.

@@ -15,7 +15,7 @@ conversion tooling here is MIT. See [NOTICE](NOTICE).
 ## Install
 
 ```bash
-git clone https://github.com/TU-USUARIO/kimi-bughunter.git
+git clone https://github.com/Sadino07/kimi-bughunter.git
 cp -r kimi-bughunter/skills/* ~/.kimi-code/skills/
 ```
 

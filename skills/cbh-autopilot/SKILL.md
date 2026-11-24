@@ -97,5 +97,11 @@ vuln_class with strong **negative** history on this tech stack (`dead-class`).
 - Run `/pickup target.com` next time to pick up where you left off
 - Check the ledger (`~/.claude/bughunter/memory/findings.jsonl`) or run `/memory-gc` for its size
 
+> **Cross-engagement persistence is opt-in (`--use-memory`).** By default the engine
+> pools **nothing** target-identifying across engagements; the ledger (and so `/pickup`)
+> is populated only on runs started with `--use-memory`. For leak-proof cross-target
+> learning without storing any host/URL, use `--use-metrics` (generic hit-rate
+> counters keyed by tech-stack + vuln-class only).
+
 ---
 *Adapted for Kimi Code from [Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) by Sachin Sharma / ElementalSoul — content CC BY 4.0.*
